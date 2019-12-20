@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leo.Chimp.Domain", "example
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leo.Chimp.Test", "test\Leo.Chimp.Test\Leo.Chimp.Test.csproj", "{ACAEE484-293F-4F82-B8D6-269A00FDBB57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiRep.Web", "MultiRep.Web\MultiRep.Web.csproj", "{10F2FC5A-C006-4243-A47F-62D423830C92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{ACAEE484-293F-4F82-B8D6-269A00FDBB57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACAEE484-293F-4F82-B8D6-269A00FDBB57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACAEE484-293F-4F82-B8D6-269A00FDBB57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10F2FC5A-C006-4243-A47F-62D423830C92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10F2FC5A-C006-4243-A47F-62D423830C92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10F2FC5A-C006-4243-A47F-62D423830C92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10F2FC5A-C006-4243-A47F-62D423830C92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{22CF40A1-EE7E-4EBA-A502-5C5FC0D0758B} = {98E27906-6784-4538-9CDA-90FDEA7C83EF}
 		{1216801F-2F9A-423D-9460-E3D301496533} = {98E27906-6784-4538-9CDA-90FDEA7C83EF}
 		{ACAEE484-293F-4F82-B8D6-269A00FDBB57} = {8DC16EBA-2D9F-473A-820E-5A96C35E44F5}
+		{10F2FC5A-C006-4243-A47F-62D423830C92} = {A9856CFD-8B10-4C9E-B4B7-E49704894C71}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D936E593-6A06-4989-8708-382308D741CF}

@@ -20,8 +20,10 @@ namespace Leo.Chimp.Test
         public DapperTest()
         {
             var services = new ServiceCollection();
-            services.AddChimp(opt => { opt.UseMySql("server = 10.0.0.146;database=chimp;uid=root;password=123456;"); });
-            //services.AddChimp(opt => { opt.UseSqlServer("Server=10.0.0.99;Database=chimp;Uid=sa;Pwd=Fuluerp123"); });
+
+            //services.AddChimp(opt => {    opt.UseSqlServer("server =.;database=LyfingRepository;uid=sa;password=password;");});
+            services.AddChimp(opt => { opt.UseSqlServer("server =.;database=LyfingRepository;uid=sa;password=password;"); });
+         
             var sp = services.BuildServiceProvider();
             _unitOfWork = sp.GetRequiredService<IUnitOfWork>();
             _schoolRepository = sp.GetRequiredService<ISchoolRepository>();

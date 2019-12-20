@@ -12,10 +12,6 @@ namespace Leo.Chimp
     /// </summary>
     public class BaseDbContext : DbContext
     {
-        protected BaseDbContext()
-        {
-        }
-
         public BaseDbContext(DbContextOptions options) : base(options)
         {
         }
@@ -44,6 +40,7 @@ namespace Leo.Chimp
 
         private  List<Assembly> GetCurrentPathAssembly()
         {
+
             var dlls = DependencyContext.Default.CompileLibraries
                 .Where(x => !x.Name.StartsWith("Microsoft") && !x.Name.StartsWith("System"))
                 .ToList();

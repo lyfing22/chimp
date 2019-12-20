@@ -38,6 +38,12 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddScoped(typeof(IRepository<>), typeof(EfCoreRepository<>));
         }
         //auto di
+        /// <summary>
+        /// 注册所有IRepository的子类
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="baseType"></param>
+        /// <returns></returns>
         private static IServiceCollection AutoDi(this IServiceCollection services, Type baseType)
         {
             var allAssemblies = AppDomain.CurrentDomain.GetCurrentPathAssembly();

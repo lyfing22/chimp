@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestDB">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestDBResult" type="tns:Patient" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Patient">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateOfBirth" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GlobalPatientId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatientMasterIndex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpellName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SocietyNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClinicalNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InpatientNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MergeId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="HospitalId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastUpdateDateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateDateTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDCard" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Marriage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FamilyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GivenName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HISPatientId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServerNode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDelete" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdateUserCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdateUserDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" nillable="true" type="tns:TimeSpan" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TimeSpan" />
+      <s:element name="PostFailedOrderData">
+        <s:complexType />
+      </s:element>
+      <s:element name="PostFailedOrderDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostFailedOrderDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HIPMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="action" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HIPMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HIPMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestDBSoapIn">
+    <wsdl:part name="parameters" element="tns:TestDB" />
+  </wsdl:message>
+  <wsdl:message name="TestDBSoapOut">
+    <wsdl:part name="parameters" element="tns:TestDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="PostFailedOrderDataSoapIn">
+    <wsdl:part name="parameters" element="tns:PostFailedOrderData" />
+  </wsdl:message>
+  <wsdl:message name="PostFailedOrderDataSoapOut">
+    <wsdl:part name="parameters" element="tns:PostFailedOrderDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="HIPMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:HIPMessage" />
+  </wsdl:message>
+  <wsdl:message name="HIPMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:HIPMessageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PlatformInterfaceServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestDB">
+      <wsdl:input message="tns:TestDBSoapIn" />
+      <wsdl:output message="tns:TestDBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostFailedOrderData">
+      <wsdl:input message="tns:PostFailedOrderDataSoapIn" />
+      <wsdl:output message="tns:PostFailedOrderDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HIPMessage">
+      <wsdl:input message="tns:HIPMessageSoapIn" />
+      <wsdl:output message="tns:HIPMessageSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PlatformInterfaceServiceSoap" type="tns:PlatformInterfaceServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestDB">
+      <soap:operation soapAction="http://tempuri.org/TestDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostFailedOrderData">
+      <soap:operation soapAction="http://tempuri.org/PostFailedOrderData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HIPMessage">
+      <soap:operation soapAction="http://tempuri.org/HIPMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PlatformInterfaceServiceSoap12" type="tns:PlatformInterfaceServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestDB">
+      <soap12:operation soapAction="http://tempuri.org/TestDB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostFailedOrderData">
+      <soap12:operation soapAction="http://tempuri.org/PostFailedOrderData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HIPMessage">
+      <soap12:operation soapAction="http://tempuri.org/HIPMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PlatformInterfaceService">
+    <wsdl:port name="PlatformInterfaceServiceSoap" binding="tns:PlatformInterfaceServiceSoap">
+      <soap:address location="http://192.168.88.39:8032/PlatformInterfaceService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PlatformInterfaceServiceSoap12" binding="tns:PlatformInterfaceServiceSoap12">
+      <soap12:address location="http://192.168.88.39:8032/PlatformInterfaceService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
